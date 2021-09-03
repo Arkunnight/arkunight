@@ -1,0 +1,60 @@
+html{
+    box-sizing: border-box;
+    font-size: 100%;
+}
+*,*::after,*::before{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 500;
+    color: $desaturatedBlue;
+    font-size: 1rem;
+    background-color: $paleBlue;
+    text-align: center;
+    background-image: url(../images/pattern-background-mobile.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    @include breakpoint-up(large){
+        background-image: url(../images/pattern-background-desktop.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+
+    }
+}
+a, a:hover,a:visited{
+    text-decoration: none;
+}
+h1 {
+    font-weight: 900;
+    margin-top: 35px;
+    font-size: 23px;
+    color: $darkBlue;
+    @include breakpoint-up(large){
+        font-size: 28px;
+        margin-top: 46px;
+    }
+}
+p{
+    margin-top: 24px;
+    letter-spacing: -0.352px;
+    max-width: 250px;
+    margin: auto;
+    margin-top: 24px;
+    margin-bottom: 30px;
+    line-height: 1.528;
+    @include breakpoint-up(large){
+        margin-top: 22px;
+        margin-bottom: 24px;
+        max-width: 292px;
+    }
+}

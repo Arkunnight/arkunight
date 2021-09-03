@@ -1,0 +1,106 @@
+.container{
+    min-width: 326px;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 6.2px 20px 0px rgba($color: #000000, $alpha: 0.1);
+    @include breakpoint-up(large){
+        max-width: 452px;
+
+    }
+}
+
+.pall{
+    padding-left: 24px;
+    padding-right: 24px;
+    @include breakpoint-up(large){
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+}
+.hero{
+    &__img{
+        background: url(../images/illustration-hero.svg);
+        background-size: cover;
+        min-height: 10rem;
+        @include breakpoint-up(large){
+            min-height: 200px;
+        }
+    
+    }
+    &__info{
+        display: flex;
+        align-items: center;
+        padding: 16px;
+        background-color: $veryPaleblue;
+        border-radius: 12px;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        @include breakpoint-up(large){
+            margin-bottom: 32px;
+            padding: 24px;
+        }
+    }
+    &__detail{
+        flex: 1;
+        margin-left: 20px;
+        text-align: left;
+    }
+    
+}
+
+.icon{
+    width: 48px;
+
+    
+}
+.plan{
+    font-weight: 700;
+    color: $darkBlue;
+    margin-bottom: 5px;
+    letter-spacing: -0.352px;
+    
+}
+.price{
+    margin-top: 5px;
+}
+.button{
+    &__change{
+        
+        text-decoration: underline;
+        color: $brightBlue;
+        font-weight: 700;
+        transition: all .3s ease-in-out ;
+    }
+    &__change:hover{
+        text-decoration: none;
+        color: $desaturatedBlue;
+    }
+    &__pros{
+        display: block;
+        padding: 18px 64px;
+        color: #fff;
+        background: $brightBlue;
+        border-radius: 10px;
+        font-weight: 900;
+        margin-bottom: 28px;
+        box-shadow: 0px 6.2px 20px 0px rgba($color: #000000, $alpha: 0.3);
+        transition: background-color .3s ease-in-out;
+        @include breakpoint-up(large){
+            margin-bottom: 48px;
+        }
+    }
+    &__pros:hover{
+        background-color: $desaturatedBlue;
+    }
+    &__cancel{
+        display: block;
+        color: $desaturatedBlue; 
+        margin-bottom: 36px;  
+        font-weight: 700;
+        transition: color .3s ease-in-out;   
+    }
+    &__cancel:hover{
+        color: $darkBlue;
+    }
+}
